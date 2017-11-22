@@ -1,0 +1,37 @@
+
+node {
+    echo 'Infinity Group work!'
+    def server = Artifactory .newServer url: 'http://localhost:9999', username: 'admin', password: 'admin'
+    // Create an Artifactory  Maven instance.
+    def rtMaven = Artifactory .newMavenBuild()
+    def buildInfo
+    
+    stage('Clone Repository Stage') {
+       git url:'https://github.com/SWEN6305/management.git'
+    }
+	
+    stage('Artifactory  Configuration Stage') {
+        // Tool name from Jenkins configuration
+        rtMaven.tool = "Maven"
+    }
+	
+    stage('Maven Build Stage') {
+        buildInfo = rtMaven.run pom: 'pom.xml', goals: 'clean install'
+    }
+    
+    stage('Publish Build Info') {
+        //server.publishBuildInfo buildInfo
+    }
+    
+   stage('Deploy Stage') {
+        archiveArtifacts artifacts:'**/*.war'
+    }
+    
+    stage('Testing Stage') {
+        echo 'Testing ...'
+    }
+}
+
+
+
+
