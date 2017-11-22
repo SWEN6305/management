@@ -1,5 +1,6 @@
 <!-- alpha -->
 
+
 		<!-- Servlets -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
@@ -62,4 +63,13 @@
 		</plugins>
 	</build>
 	<!-- Added By Alpha -->
+<!-- Added By Inifnity Maheera -->
+
 </project>
+
+
+<!-- Infinity Team, Hiba, First Commit -->
+<!-- Infinity Team, Hiba, Second Commit -->
+<!-- Infinity Team, Ibrahim Commit -->
+<!-- Infinity Team, Yara, Fourth Commit -->
+
